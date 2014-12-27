@@ -1,5 +1,7 @@
+require "faraday"
+
 module Faraday
-  module RaiseErrors
-    VERSION = "0.0.1"
+  class RaiseErrors < ::Faraday::Response::Middleware
+    VERSION = "0.2.0"
   end
 end

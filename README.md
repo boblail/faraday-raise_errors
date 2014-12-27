@@ -1,13 +1,13 @@
 # Faraday::RaiseErrors
 
-TODO: Write a gem description
+Faraday middleware that raises exceptions for HTTP errors in the 400..599 range.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'faraday-raise_errors'
+gem "faraday-raise_errors"
 ```
 
 And then execute:
@@ -20,11 +20,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+connection = Faraday.new
+connection.use Faraday::RaiseErrors
+```
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/faraday-raise_errors/fork )
+1. Fork it ( https://github.com/boblail/faraday-raise_errors/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
