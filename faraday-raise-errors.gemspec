@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'faraday/raise_errors/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "faraday-raise_errors"
+  spec.name          = "faraday-raise-errors"
   spec.version       = Faraday::RaiseErrors::VERSION
   spec.authors       = ["Bob Lail"]
   spec.email         = ["bob.lailfamily@gmail.com"]
