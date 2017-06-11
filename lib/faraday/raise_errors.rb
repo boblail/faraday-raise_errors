@@ -3,7 +3,7 @@ require "faraday/http_errors"
 require "faraday/raise_errors/version"
 
 module Faraday
-  
+
   class RaiseErrors < ::Faraday::Response::Middleware
     def on_complete(env)
       case env[:status]
@@ -18,10 +18,10 @@ module Faraday
         raise exception.new(env)
       end
     end
-    
+
     def response_values(env)
       { status: env[:status], headers: env[:response_headers], body: env[:body] }
     end
   end
-  
+
 end
