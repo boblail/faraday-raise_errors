@@ -7,7 +7,7 @@ Faraday middleware that raises exceptions for HTTP errors in the 400..599 range.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "faraday-raise_errors"
+gem "faraday-raise-errors"
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install faraday-raise_errors
+    $ gem install faraday-raise-errors
 
 ## Usage
 
