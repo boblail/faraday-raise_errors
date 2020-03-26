@@ -8,10 +8,10 @@ module Faraday
     def on_complete(env)
       case env[:status]
       when 404
-        raise Faraday::Error::ResourceNotFound, response_values(env)
+        raise Faraday::ResourceNotFound, response_values(env)
       when 407
         # mimic the behavior that we get with proxy requests with HTTPS
-        raise Faraday::Error::ConnectionFailed, %{407 "Proxy Authentication Required "}
+        raise Faraday::ConnectionFailed, %{407 "Proxy Authentication Required "}
       when 400..599
         error = Faraday::HTTP::ERRORS.fetch(env[:status], :UnrecognizedResponse)
         exception = Faraday::HTTP.const_get error
